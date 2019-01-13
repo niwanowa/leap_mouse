@@ -1,5 +1,5 @@
 from include import Leap
-import  mouse_control
+import mouse_control
 
 def main():
     controller = Leap.Controller()
@@ -14,6 +14,7 @@ def main():
             print "Leap Motion disconnected"
         if controller_state == 1:
             mouse_control.main(controller)
+
 
 if __name__ == '__main__':
     main()
