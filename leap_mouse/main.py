@@ -4,7 +4,7 @@ import mouse_control
 def main():
     controller = Leap.Controller()
     controller_state = 0
-    print "Hello World"
+    print "Leap_mouse has already started"
     while True:
         if controller.is_connected and controller_state == 0:
             controller_state = 1

@@ -37,6 +37,7 @@ def main():
                 print(key_tap)
                 pyautogui.click()
 
+
 def hand_position(frame):
         position = None
         try:
@@ -45,6 +46,7 @@ def hand_position(frame):
             return position
         except:
             pass
+
 
 if __name__ == '__main__':
     main()

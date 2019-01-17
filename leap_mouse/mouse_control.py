@@ -2,9 +2,11 @@
 import pyautogui
 from include import Leap
 
+
 def load_fingers(frame):
     fingers = frame.fingers
     return fingers
+
 
 def load_finger_position(fingers, finger_id, coordinate='y'):
     if coordinate == 'x':
@@ -26,7 +28,7 @@ def move_mouse(latest_fingers, previous_fingers):
     move_x = load_finger_position(previous_fingers, 1, 'x') - load_finger_position(latest_fingers, 1, 'x')
     move_z = load_finger_position(previous_fingers, 1, 'z') - load_finger_position(latest_fingers, 1, 'z')
     # Prevent erroneous detection
-    if  -3 <= move_x <= 3 and -3 <= move_z <= 3:
+    if -3 <= move_x <= 3 and -3 <= move_z <= 3:
         pyautogui.moveRel(-move_x*10, -move_z*10)
         print move_z
 
